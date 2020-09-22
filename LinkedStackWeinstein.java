@@ -1,0 +1,7 @@
+/**
+ * LinkedStackWeinstein
+ */
+public class LinkedStackWeinstein {
+
+    
+}

@@ -1,0 +1,7 @@
+/**
+ * StackInterfaceWeinstein
+ */
+public interface StackInterfaceWeinstein {
+
+    
+}
