@@ -1,6 +1,3 @@
-import java.util.EmptyStackException;
-import java.util.LinkedList;
-
 /**
  * LinkedStackWeinstein
  * This class is an implementation of a stack that place the entries at the end of a chain of linked nodes.
@@ -10,7 +7,6 @@ import java.util.LinkedList;
  */
 public class LinkedStackWeinstein<T> implements StackInterfaceWeinstein<T> {
     private Node tail; // reference to tail node in stack
-    private Node head; // reference to head node in stack
     private int numberOfEntries;
 
     public LinkedStackWeinstein() {
@@ -33,6 +29,9 @@ public class LinkedStackWeinstein<T> implements StackInterfaceWeinstein<T> {
     /** Removes and returns this stack’s top entry.
     @return  The object at the top of the stack. Returns null if stack is empty */
     public T pop() {
+        if(isEmpty()) {
+            return null;
+        }
         T end = peek();
         tail = tail.getNextNode();
         numberOfEntries--;
@@ -54,6 +53,9 @@ public class LinkedStackWeinstein<T> implements StackInterfaceWeinstein<T> {
      * @throws NullPointerException if stack has fewer than 2 entries 
      */
     public T peek2() {
+        if (numberOfEntries<2) {
+            return null;
+        }
         return tail.getNextNode().getData();
     }
 
@@ -62,6 +64,7 @@ public class LinkedStackWeinstein<T> implements StackInterfaceWeinstein<T> {
         tail = null;
         numberOfEntries = 0;
     }
+
 
     private class Node {
         private T data; // entry in stack
