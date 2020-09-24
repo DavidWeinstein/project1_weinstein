@@ -9,7 +9,9 @@ public class ArrayStackDriverWeinstein {
         arrayTest.push("dave");
         arrayTest.push("joe");
         arrayTest.push("krissy");
-        arrayTest.clear();
+        System.out.println(arrayTest.pop());
+        System.out.println(arrayTest.peek());
+        System.out.println(arrayTest.peek2());
         System.out.println(arrayTest.isEmpty());
     }
 }

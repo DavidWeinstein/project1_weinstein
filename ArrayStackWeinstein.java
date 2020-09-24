@@ -36,16 +36,25 @@ public final class ArrayStackWeinstein<T> implements StackInterfaceWeinstein<T> 
     public T peek() {
         checkIntegrity();
         if (isEmpty()) {
-            throw new EmptyStackException();
+            return null;
         } else {
             return stack[topIndex];
         }
     } // end peek
 
+    public T peek2() {
+        checkIntegrity();
+        if (topIndex>0){
+            return stack[topIndex - 1];
+        } else {
+            return null;
+        }
+    }
+
     public T pop() {
         checkIntegrity();
         if (isEmpty()) {
-            throw new EmptyStackException();
+            return null;
         }
         final T top = stack[topIndex];
         stack[topIndex] = null;
@@ -64,7 +73,7 @@ public final class ArrayStackWeinstein<T> implements StackInterfaceWeinstein<T> 
 
     private void ensureCapacity() {
         if (topIndex == stack.length - 1) {
-            final int newLength = 2 * stack.length;
+            int newLength = 2 * stack.length;
             checkCapacity(newLength);
             stack = Arrays.copyOf(stack, newLength);
         }
