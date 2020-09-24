@@ -18,7 +18,7 @@
  * @author David Weinstein 9/24/2020
  * 
  */
-public class LinkedStackWeinstein<T> implements StackInterfaceWeinstein<T> {
+public final class LinkedStackWeinstein<T> implements StackInterfaceWeinstein<T> {
     private Node head; // reference to head node in stack
     private int numberOfEntries;
 

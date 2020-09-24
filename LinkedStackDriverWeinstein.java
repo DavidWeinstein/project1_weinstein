@@ -22,7 +22,7 @@ public class LinkedStackDriverWeinstein {
         System.out.println("isEmpty() returns: " + testStack.isEmpty());
         System.out.println();
 
-        System.out.println("***Testing peek and pop***");
+        System.out.println("***Testing peek, peek2, and pop***");
         System.out.println(testStack.peek() + " is at the top of the stack.");
         System.out.println(testStack.peek2() + " is just beneath the top of the stack.");
         System.out.println(testStack.pop() + " is removed from the stack.");
